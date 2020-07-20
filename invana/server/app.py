@@ -1,9 +1,8 @@
 from flask import Flask
 from flask_restful import Api
-from server.views import GremlinView
+from server.views import GremlinQueryView
 from flask_restful import Resource
 from flask_cors import CORS
-
 import os
 
 HOST_NAME = os.environ.get("HOST_NAME", "localhost")
@@ -37,7 +36,7 @@ class PingPongView(Resource):
 
 api.add_resource(HomeView, '/')
 api.add_resource(PingPongView, '/ping')
-api.add_resource(GremlinView, '/gremlin')
+api.add_resource(GremlinQueryView, '/api/gremlin')
 
 if __name__ == '__main__':
     app.run(debug=True)
