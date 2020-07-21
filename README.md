@@ -4,7 +4,6 @@ Proxy layer for Apache TinkerPop's Gremlin Server.
 
 
 [![Apache license](https://img.shields.io/badge/license-Apache-blue.svg)](https://github.com/invanalabs/gremlin-server-proxy/blob/master/LICENSE) 
-[![Build Status](https://travis-ci.org/invanalabs/gremlin-server-proxy.svg?branch=master)](https://travis-ci.org/invanalabs/gremlin-server-proxy)
 [![Docker pulls](https://img.shields.io/docker/pulls/invanalabs/gremlin-server-proxy)](https://hub.docker.com/r/invanalabs/gremlin-server-proxy)
 [![Docs](https://img.shields.io/badge/docs-latest%20version-blue)](https://invana.io/docs.html)
 
