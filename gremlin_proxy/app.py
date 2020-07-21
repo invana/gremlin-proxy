@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Api
-from .views import GremlinQueryView
+from gremlin_proxy.views import GremlinQueryView
 from flask_restful import Resource
 from flask_cors import CORS
 import os

@@ -8,8 +8,8 @@ then
 	exit 1
 fi
 
-docker build . -t invanalabs/gremlin-server-proxy
-docker tag invanalabs/gremlin-server-proxy invanalabs/gremlin-server-proxy:"$DOCKER_TAG"
-docker tag invanalabs/gremlin-server-proxy invanalabs/gremlin-server-proxy:latest
-docker push invanalabs/gremlin-server-proxy:"$DOCKER_TAG"
-docker push invanalabs/gremlin-server-proxy:latest
+docker build . -t invanalabs/gremlin-proxy
+docker tag invanalabs/gremlin-proxy invanalabs/gremlin-proxy:"$DOCKER_TAG"
+docker tag invanalabs/gremlin-proxy invanalabs/gremlin-proxy:latest
+docker push invanalabs/gremlin-proxy:"$DOCKER_TAG"
+docker push invanalabs/gremlin-proxy:latest

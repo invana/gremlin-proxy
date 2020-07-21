@@ -1,7 +1,6 @@
 from gremlin_python.driver.driver_remote_connection import DriverRemoteConnection as _DriverRemoteConnection
-from .serializers import GremlinResponseSerializer
+from gremlin_proxy.serializers import GremlinResponseSerializer
 from gremlin_python.driver import client
-
 import urllib.parse
 import urllib.request
 import json

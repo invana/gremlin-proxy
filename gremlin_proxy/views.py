@@ -2,8 +2,8 @@
 Views of gremlin connector with http.
 """
 from flask_restful import Resource
-from invana.graph.connector import GremlinHTTPConnectClient, GremlinWSConnectorClient
-from .auth import InvanaTokenAuth
+from connector import GremlinHTTPConnectClient
+from gremlin_proxy.auth import InvanaTokenAuth
 from flask import request
 import os
 
