@@ -9,7 +9,7 @@ Proxy layer for Apache TinkerPop's Gremlin Server.
 [![Docs](https://img.shields.io/badge/docs-latest%20version-blue)](https://invana.io/docs.html)
 
 
-## 1. Installation
+## Installation
 
 
 | Environment Variable        | default           | Example                            |
@@ -19,11 +19,11 @@ Proxy layer for Apache TinkerPop's Gremlin Server.
  
 **Note** Currently only http hosts are acceptable.
 
-##### 1.1 Run from docker image
+##### Run from docker image
 ```shell script
 docker run -p 9600:9600 -d --name gremlin-server-proxy invanalabs/gremlin-server-proxy
 ```
-##### 1.2 Build your own docker
+##### Build your own docker
 ```shell script
 git clone git@github.com:invanalabs/gremlin-server-proxy.git
 cd gremlin-server-proxy
@@ -31,11 +31,11 @@ docker build . -t gremlin-server-proxy
 docker run --name gremlin-server-proxy -d -p 9600:9600 -e GREMLIN_HOST="http://127.0.0.1:8182" gremlin-server-proxy 
 ```
 
-## 2. License 
+## License 
 
 Apache License 2.0
 
-## 3. Support
+## Support
 
 For any further queries or dedicated support, please feel free to get in touch with me at hi[at]invana.io.
 
