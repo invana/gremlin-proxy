@@ -1,5 +1,5 @@
 from gremlin_python.driver.driver_remote_connection import DriverRemoteConnection as _DriverRemoteConnection
-from invana.graph.serializers import GremlinResponseSerializer
+from .serializers import GremlinResponseSerializer
 from gremlin_python.driver import client
 
 import urllib.parse

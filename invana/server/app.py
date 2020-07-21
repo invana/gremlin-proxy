@@ -1,11 +1,11 @@
 from flask import Flask
 from flask_restful import Api
-from server.views import GremlinQueryView
+from .views import GremlinQueryView
 from flask_restful import Resource
 from flask_cors import CORS
 import os
 
-HOST_NAME = os.environ.get("HOST_NAME", "localhost")
+GREMLIN_HOST = os.environ.get("GREMLIN_HOST")
 VERSION = os.environ.get("VERSION", "alpha")
 
 app = Flask(__name__)
@@ -21,7 +21,7 @@ class HomeView(Resource):
 
     def get(self):
         return {"message": "Hey there! Happy connecting the Dots with InvanaGraph.",
-                "hostname": HOST_NAME,
+                "hostname": GREMLIN_HOST,
                 "version": VERSION}, 200
 
 
