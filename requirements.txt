@@ -1,3 +1,2 @@
-Flask-RESTful
 gremlinpython==3.4.6
 flask-cors

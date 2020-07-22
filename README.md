@@ -8,7 +8,9 @@ authentication abilities from web browsers by solving Cross-origin resource shar
 [![Docs](https://img.shields.io/badge/docs-latest%20version-blue)](https://invana.io/docs.html)
 
 This project let's you connect to your favorite Gremlin Server using connection 
-strings from the web browsers. The program will only handle response from 
+strings from the web browsers. This service doesn't add any layer of security, 
+it just avoids the CORS issue. You can extend this service to add your own authentication 
+or event logging.
 
 
 ## Installation
@@ -32,7 +34,7 @@ docker run -p 9600:9600 -e GREMLIN_HOST=http://127.0.0.1:8182 -d --name gremlin-
 git clone git@github.com:invanalabs/gremlin-proxy.git
 cd gremlin-proxy
 docker build . -t gremlin-proxy 
-docker run --name gremlin-proxy -d -p 9600:9600 -e GREMLIN_HOST="http://127.0.0.1:8182" gremlin-proxy 
+docker run --name gremlin-proxy -d -p 9600:9600 -e GREMLIN_HOST="http://192.168.0.10:8182" gremlin-proxy 
 
 ```
 
