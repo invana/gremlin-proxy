@@ -12,9 +12,8 @@ Proxy layer for Apache TinkerPop's Gremlin Server.
 
 
 | Environment Variable        | default           | Example                            |
-| --------------------------- |:-----------------:| ----------------------------------:|
-| GREMLIN_HOST                | null              | http://127.0.0.1:8182, https://api.domain.io |
- 
+|:--------------------------- |:-----------------:| ----------------------------------:|
+| GREMLIN_HOST                | null              | eg: http://127.0.0.1:8182, https://api.domain.io |
  
 **Note** Currently only http hosts are acceptable.
 

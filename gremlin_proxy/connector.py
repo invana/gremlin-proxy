@@ -4,6 +4,7 @@ from gremlin_python.driver import client
 import urllib.parse
 import urllib.request
 import json
+from base64 import b64encode
 
 
 class DriverRemoteConnection(_DriverRemoteConnection):
@@ -19,21 +20,19 @@ class GremlinHTTPConnectClient:
 
     def __init__(self, gremlin_server_url, headers=None):
         if headers is None:
-            headers = {'content-type': 'application/json'}
+            headers = {}
+        # headers.update({'Content-Type': 'application/json'})
         if gremlin_server_url is None:
             raise Exception("Invalid gremlin_server_url. default: ws://127.0.0.1:8182/gremlin")
         self.gremlin_server_url = gremlin_server_url
         self.headers = headers
 
-    def execute_raw_query(self, raw_query):
+    def execute_raw_query(self, query_json):
         """
-        :param raw_query: Gremlin query in plain string.
+        :param query_json: eg:  {'gremlin': 'g.V().limit(5).toList()'}
         :return:
         """
-
-        json_query = {'gremlin': raw_query}
-        params = json.dumps(json_query).encode('utf8')
-        # TODO - look for connection caching mechanism
+        params = json.dumps(query_json).encode('utf8')
         req = urllib.request.Request(self.gremlin_server_url, params, self.headers)
         with urllib.request.urlopen(req) as response:
             return json.loads(response.read())
