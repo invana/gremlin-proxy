@@ -25,8 +25,8 @@ def after_request(response):
 
 @app.route("/", methods=["GET"])
 def hello_view():
-    return {"message": "Hey there! Happy connecting the Dots with InvanaGraph.",
-            "hostname": GREMLIN_HOST,
+    return {"message": "Hey there! Happy Gremlin Proxying. Look at https://invana.io/docs",
+            "gremlin-hostname": GREMLIN_HOST,
             "version": VERSION}, 200
 
 
