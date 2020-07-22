@@ -23,7 +23,7 @@ def after_request(response):
     return response
 
 
-@app.route("/", methods=["POST"])
+@app.route("/", methods=["GET"])
 def hello_view():
     return {"message": "Hey there! Happy connecting the Dots with InvanaGraph.",
             "hostname": GREMLIN_HOST,
