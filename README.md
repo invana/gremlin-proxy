@@ -28,7 +28,7 @@ or event logging.
 
 ##### Run from docker image
 ```shell script
-docker run -p 9600:9600 -e GREMLIN_HOST=http://127.0.0.1:8182 -d --name gremlin-proxy invanalabs/gremlin-proxy 
+docker run -p 9600:9600 -e GREMLIN_HOST=http://192.168.0.10:8182 -d --name gremlin-proxy invanalabs/gremlin-proxy 
 ```
 
 ##### Build from dockerfile
