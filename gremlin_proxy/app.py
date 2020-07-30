@@ -42,7 +42,8 @@ def headers_for_gremlin(all_headers):
     interested_header_keys = ["Content-Type", "Authorization"]
     new_data = {}
     for interested_header_key in interested_header_keys:
-        new_data[interested_header_key] = all_headers.get(interested_header_key)
+        if all_headers.get(interested_header_key):
+            new_data[interested_header_key] = all_headers.get(interested_header_key)
     return new_data
 
 
